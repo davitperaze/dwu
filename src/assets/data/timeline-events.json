@@ -1,0 +1,93 @@
+
+[
+  {
+    "year": "The Beginning",
+    "title": "The Timeless Child is Found",
+    "description": "A Gallifreyan explorer named Tecteun finds a mysterious child at the foot of a gateway to another dimension. The child becomes the source of regeneration for Time Lord society.",
+    "category": "milestone"
+  },
+  {
+    "year": "Pre-1963",
+    "title": "The Doctor Leaves Gallifrey",
+    "description": "The First Doctor, along with his granddaughter Susan, steals a faulty Type 40 TARDIS and flees his home planet of Gallifrey to explore the universe.",
+    "category": "milestone"
+  },
+  {
+    "year": "1963",
+    "title": "An Unearthly Child",
+    "description": "The Doctor's journey begins when two schoolteachers, Ian and Barbara, follow his granddaughter Susan into the TARDIS, forcing him to take them on his travels.",
+    "category": "debut"
+  },
+  {
+    "year": "1963",
+    "title": "First Encounter with the Daleks",
+    "description": "The TARDIS crew lands on the planet Skaro, where the Doctor meets his most persistent and deadly enemies, the Daleks, for the first time.",
+    "category": "milestone"
+  },
+  {
+    "year": "1966",
+    "title": "The First Regeneration",
+    "description": "After defeating the Cybermen on Mondas, the Doctor's weary body gives out, leading to his first-ever regeneration into a new form.",
+    "category": "regeneration"
+  },
+  {
+    "year": "1969",
+    "title": "Trial and Exile",
+    "description": "For interfering in the affairs of other races, the Second Doctor is put on trial by the Time Lords, forced to regenerate, and exiled to 20th-century Earth.",
+    "category": "milestone"
+  },
+  {
+    "year": "1970",
+    "title": "Exile on Earth Begins",
+    "description": "The newly regenerated Third Doctor arrives on Earth, unable to use his TARDIS, and begins a reluctant partnership with the United Nations Intelligence Taskforce (UNIT).",
+    "category": "milestone"
+  },
+  {
+    "year": "1971",
+    "title": "Meeting the Master",
+    "description": "The Doctor's arch-nemesis, the Master, a fellow renegade Time Lord, arrives on Earth, beginning a long history of conflict and rivalry.",
+    "category": "milestone"
+  },
+  {
+    "year": "1975",
+    "title": "Genesis of the Daleks",
+    "description": "The Time Lords send the Fourth Doctor on a mission to Skaro at the moment of the Daleks' creation, tasking him with preventing their existence or altering their development to be less aggressive.",
+    "category": "milestone"
+  },
+  {
+    "year": "Time War Era",
+    "title": "The Last Great Time War",
+    "description": "A catastrophic conflict rages across time and space between the Time Lords of Gallifrey and the Dalek Empire. The Doctor fights in this war as a forgotten incarnation, the War Doctor.",
+    "category": "milestone"
+  },
+  {
+    "year": "2005",
+    "title": "The Series Revival",
+    "description": "The Doctor, scarred by the Time War, returns to television screens, meeting new companion Rose Tyler and re-establishing his mission to protect Earth.",
+    "category": "revival"
+  },
+  {
+    "year": "2013",
+    "title": "The Day of the Doctor",
+    "description": "Three incarnations of the Doctor—the War, Tenth, and Eleventh—unite to rewrite their greatest regret, saving Gallifrey from destruction in the Time War by freezing it in a pocket universe.",
+    "category": "anniversary"
+  },
+  {
+    "year": "2015",
+    "title": "Return to Gallifrey",
+    "description": "After billions of years trapped in his confession dial, the Twelfth Doctor escapes and finally returns to his home planet of Gallifrey, only to become its new Lord President.",
+    "category": "milestone"
+  },
+  {
+    "year": "2020",
+    "title": "The Timeless Child Revealed",
+    "description": "The Master reveals the hidden history of the Time Lords, showing the Doctor that she is the 'Timeless Child', the original source of regeneration, with countless forgotten lives.",
+    "category": "milestone"
+  },
+  {
+    "year": "2023",
+    "title": "The Bi-Generation",
+    "description": "In a mythical event never seen before, the Doctor bi-generates instead of regenerating, allowing the Fourteenth Doctor to rest while the Fifteenth begins new adventures.",
+    "category": "milestone"
+  }
+]

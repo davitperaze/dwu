@@ -1,0 +1,24 @@
+<div class="bg-white dark:bg-gray-800 rounded-2xl shadow-md hover:shadow-xl dark:hover:shadow-blue-500/20 transition-all duration-300 overflow-hidden group flex flex-col" [attr.data-testid]="'character-card-' + character().id">
+  <!-- Square media area at the top of the card -->
+  <div class="w-full aspect-square bg-gray-200 dark:bg-gray-700">
+    <img [ngSrc]="character().imageUrl" [alt]="'Image of ' + character().name" width="400" height="400" [priority]="priority()" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-300" data-testid="character-card-image" />
+  </div>
+
+  <!-- Content area below the image -->
+  <div class="p-4 flex-grow flex flex-col">
+    <!-- Text content -->
+    <div class="flex-grow">
+      <h3 class="text-xl font-bold text-gray-900 dark:text-gray-100" data-testid="card-name">{{ character().name }}</h3>
+      <p class="text-sm text-gray-500 dark:text-gray-400 mb-2" data-testid="card-era">{{ character().era }}</p>
+      <p class="text-gray-600 dark:text-gray-400 text-sm" data-testid="card-description">
+        {{ character().description }}
+      </p>
+    </div>
+    <!-- Actions -->
+    <div class="mt-4 pt-2 flex justify-end">
+      <button (click)="onButtonClick()" class="font-semibold text-blue-600 dark:text-blue-400 rounded-full hover:bg-blue-500/10 dark:hover:bg-blue-400/10 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white dark:focus:ring-offset-gray-800 focus:ring-blue-500 transition-colors px-3 py-2" data-testid="card-fun-fact-button">
+        Get Fun Fact
+      </button>
+    </div>
+  </div>
+</div>

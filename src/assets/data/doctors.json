@@ -1,0 +1,138 @@
+[
+  {
+    "id": 1,
+    "name": "First Doctor",
+    "type": "Doctor",
+    "era": "1963–1966",
+    "description": "The original, a crotchety but brilliant scientist who began the journey.",
+    "imageUrl": "assets/images/doctors/first-doctor.png"
+  },
+  {
+    "id": 2,
+    "name": "Second Doctor",
+    "type": "Doctor",
+    "era": "1966–1969",
+    "description": "A 'cosmic hobo' with a playful exterior and a fiercely moral core.",
+    "imageUrl": "assets/images/doctors/second-doctor.png"
+  },
+  {
+    "id": 3,
+    "name": "Third Doctor",
+    "type": "Doctor",
+    "era": "1970–1974",
+    "description": "A man of action and a dandy, exiled to Earth and working with UNIT.",
+    "imageUrl": "assets/images/doctors/third-doctor.png"
+  },
+  {
+    "id": 4,
+    "name": "Fourth Doctor",
+    "type": "Doctor",
+    "era": "1974–1981",
+    "description": "Known for his iconic long scarf, wild hair, and love for jelly babies.",
+    "imageUrl": "assets/images/doctors/fourth-doctor.png"
+  },
+  {
+    "id": 5,
+    "name": "Fifth Doctor",
+    "type": "Doctor",
+    "era": "1981–1984",
+    "description": "A youthful, cricket-loving Doctor with a more vulnerable and sensitive side.",
+    "imageUrl": "assets/images/doctors/fifth-doctor.png"
+  },
+  {
+    "id": 6,
+    "name": "Sixth Doctor",
+    "type": "Doctor",
+    "era": "1984–1986",
+    "description": "Known for his flamboyant, multi-colored coat and a brash, arrogant personality that mellowed over time.",
+    "imageUrl": "assets/images/doctors/sixth-doctor.png"
+  },
+  {
+    "id": 7,
+    "name": "Seventh Doctor",
+    "type": "Doctor",
+    "era": "1987–1989",
+    "description": "Started as a clownish figure but evolved into a cunning and manipulative chessmaster.",
+    "imageUrl": "assets/images/doctors/seventh-doctor.png"
+  },
+  {
+    "id": 8,
+    "name": "Eighth Doctor",
+    "type": "Doctor",
+    "era": "1996",
+    "description": "A romantic and enthusiastic Doctor who appeared in a TV movie, bridging the classic and modern eras.",
+    "imageUrl": "assets/images/doctors/eighth-doctor.png"
+  },
+  {
+    "id": 900,
+    "name": "War Doctor",
+    "type": "Doctor",
+    "era": "Time War",
+    "description": "The forgotten incarnation who fought in the Last Great Time War. 'No More.'",
+    "imageUrl": "assets/images/doctors/war-doctor.png"
+  },
+  {
+    "id": 901,
+    "name": "Fugitive Doctor",
+    "type": "Doctor",
+    "era": "Pre-Hartnell (revealed in 2020)",
+    "description": "A previously unknown incarnation of the Doctor who worked for the Division. She is a reminder of a life the Doctor had forgotten.",
+    "imageUrl": "assets/images/doctors/fugitive-doctor.png"
+  },
+  {
+    "id": 9,
+    "name": "Ninth Doctor",
+    "type": "Doctor",
+    "era": "2005",
+    "description": "The sole survivor of the Time War, he brought the show back with a darker edge. \"Fantastic!\"",
+    "imageUrl": "assets/images/doctors/ninth-doctor.png"
+  },
+  {
+    "id": 10,
+    "name": "Tenth Doctor",
+    "type": "Doctor",
+    "era": "2005–2010",
+    "description": "A charismatic and energetic Doctor known for his pinstripe suit and \"Allons-y!\".",
+    "imageUrl": "assets/images/doctors/tenth-doctor.png"
+  },
+  {
+    "id": 11,
+    "name": "Eleventh Doctor",
+    "type": "Doctor",
+    "era": "2010–2013",
+    "description": "The \"madman with a box,\" famous for his bow ties and fezzes.",
+    "imageUrl": "assets/images/doctors/eleventh-doctor.png"
+  },
+  {
+    "id": 12,
+    "name": "Twelfth Doctor",
+    "type": "Doctor",
+    "era": "2014–2017",
+    "description": "A more severe and contemplative Doctor, often questioning his own morality. Known for his electric guitar.",
+    "imageUrl": "assets/images/doctors/twelfth-doctor.png"
+  },
+  {
+    "id": 13,
+    "name": "Thirteenth Doctor",
+    "type": "Doctor",
+    "era": "2018–2022",
+    "description": "The first female incarnation, bringing hope and a renewed sense of wonder.",
+    "imageUrl": "assets/images/doctors/thirteenth-doctor.png"
+  },
+  {
+    "id": 14,
+    "name": "Fourteenth Doctor",
+    "type": "Doctor",
+    "era": "2023",
+    "description": "A familiar face returned, revisiting old favorites before a unique 'bi-generation'.",
+    "imageUrl": "assets/images/doctors/fourteenth-doctor.png"
+  },
+  {
+    "id": 15,
+    "name": "Fifteenth Doctor",
+    "type": "Doctor",
+    "era": "2023–Present",
+    "description": "A vibrant and stylish Doctor, embracing a new era of adventure with a fresh perspective.",
+    "imageUrl": "assets/images/doctors/fifteenth-doctor.png"
+  }
+]

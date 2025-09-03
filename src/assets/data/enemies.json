@@ -1,0 +1,11 @@
+
+[
+  { "id": 201, "name": "The Daleks", "type": "Enemy", "era": "All Eras", "description": "Genetically engineered mutants in tank-like armor, obsessed with exterminating all other life.", "imageUrl": "assets/images/enemies/the-daleks.png" },
+  { "id": 202, "name": "The Master", "type": "Enemy", "era": "All Eras", "description": "A renegade Time Lord and the Doctor's archenemy, brilliant but psychopathic.", "imageUrl": "assets/images/enemies/the-master.png" },
+  { "id": 203, "name": "Cybermen", "type": "Enemy", "era": "All Eras", "description": "Cyborgs who \"upgrade\" humans by removing their emotions and bodies. Terrifyingly persistent.", "imageUrl": "assets/images/enemies/cybermen.png" },
+  { "id": 204, "name": "Weeping Angels", "type": "Enemy", "era": "New Who", "description": "Quantum-locked assassins. They are statues when you look at them, but don't blink.", "imageUrl": "assets/images/enemies/weeping-angel.png" },
+  { "id": 205, "name": "The Sontarans", "type": "Enemy", "era": "All Eras", "description": "A militaristic clone race from the planet Sontar, bred for war and obsessed with the glory of battle. Their main weakness is the probic vent on the back of their necks.", "imageUrl": "assets/images/enemies/sontaran.png" },
+  { "id": 206, "name": "The Silurians", "type": "Enemy", "era": "All Eras", "description": "A species of intelligent reptiles who were the original inhabitants of Earth before humanity. They often clash with humans over ownership of the planet.", "imageUrl": "assets/images/enemies/silurian.png" },
+  { "id": 207, "name": "The Silence", "type": "Enemy", "era": "New Who", "description": "A terrifying religious order with a unique defense mechanism: you forget seeing them the moment you look away. They have been manipulating humanity for centuries.", "imageUrl": "assets/images/enemies/the-silence.png" },
+  { "id": 208, "name": "The Zygons", "type": "Enemy", "era": "All Eras", "description": "Shape-shifting aliens whose home planet was destroyed. They can perfectly replicate the appearance and memories of other beings, making them masters of infiltration.", "imageUrl": "assets/images/enemies/zygon.png" }
+]

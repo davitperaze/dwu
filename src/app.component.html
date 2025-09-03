@@ -1,0 +1,131 @@
+<div class="min-h-screen text-gray-800 dark:text-gray-200">
+  <app-header data-testid="app-header"></app-header>
+
+  <main>
+    @if (isLoading()) {
+    <div class="container mx-auto p-4 md:p-8">
+      <div class="flex items-center justify-center h-64" data-testid="loading-indicator">
+        <div class="animate-spin rounded-full h-16 w-16 border-b-2 border-blue-500"></div>
+        <p class="ml-4 text-lg">Loading data from the Time Vortex...</p>
+      </div>
+    </div>
+    } @else if (loadingError()) {
+    <div class="container mx-auto p-4 md:p-8">
+      <div
+        class="bg-red-100 dark:bg-red-900/50 border-l-4 border-red-500 text-red-700 dark:text-red-300 p-6 rounded-lg shadow-md max-w-2xl mx-auto"
+        role="alert" data-testid="loading-error">
+        <p class="font-bold text-xl">Temporal Anomaly Detected!</p>
+        <p class="mt-2">{{ loadingError() }}</p>
+      </div>
+    </div>
+    } @else {
+    <!-- Hero/Cover Image Section -->
+    <div class="container mx-auto px-4 md:px-8 pt-4 md:pt-8">
+      <div
+        class="relative bg-gray-900 rounded-2xl overflow-hidden mb-8 md:mb-12 h-64 md:h-80 flex items-center justify-center text-center">
+        <img src="assets/images/cover.png" alt="A collage of characters and scenes from Doctor Who"
+          class="absolute inset-0 w-full h-full object-cover opacity-40 dark:opacity-50">
+        <div class="relative z-10 p-4">
+          <h1 class="text-4xl md:text-6xl font-bold text-white" data-testid="main-title">Doctor Who Universe</h1>
+          <p class="mt-2 md:mt-4 text-lg md:text-xl text-gray-200">An exploration of time, space, and memorable faces.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigation Tabs -->
+    <nav
+      class="sticky top-16 z-30 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border-b border-gray-200/80 dark:border-gray-800/80"
+      data-testid="category-nav">
+      <div class="container mx-auto flex justify-center">
+        <button (click)="setActiveCategory('doctors')"
+          class="relative px-6 py-3 font-semibold transition-colors duration-200"
+          [ngClass]="activeCategory() === 'doctors' ? 'text-blue-600 dark:text-blue-400' : 'text-gray-600 dark:text-gray-400 hover:bg-blue-500/10 dark:hover:bg-blue-400/10 rounded-t-lg'"
+          data-testid="nav-doctors"
+          [attr.data-active]="activeCategory() === 'doctors'">
+          Doctors
+          @if (activeCategory() === 'doctors') {
+          <span class="absolute bottom-0 left-1/2 -translate-x-1/2 w-16 h-[3px] bg-blue-500 rounded-t-lg"></span>
+          }
+        </button>
+        <button (click)="setActiveCategory('friends')"
+          class="relative px-6 py-3 font-semibold transition-colors duration-200"
+          [ngClass]="activeCategory() === 'friends' ? 'text-blue-600 dark:text-blue-400' : 'text-gray-600 dark:text-gray-400 hover:bg-blue-500/10 dark:hover:bg-blue-400/10 rounded-t-lg'"
+          data-testid="nav-friends"
+          [attr.data-active]="activeCategory() === 'friends'">
+          Friends
+          @if (activeCategory() === 'friends') {
+          <span class="absolute bottom-0 left-1/2 -translate-x-1/2 w-20 h-[3px] bg-blue-500 rounded-t-lg"></span>
+          }
+        </button>
+        <button (click)="setActiveCategory('enemies')"
+          class="relative px-6 py-3 font-semibold transition-colors duration-200"
+          [ngClass]="activeCategory() === 'enemies' ? 'text-blue-600 dark:text-blue-400' : 'text-gray-600 dark:text-gray-400 hover:bg-blue-500/10 dark:hover:bg-blue-400/10 rounded-t-lg'"
+          data-testid="nav-enemies"
+          [attr.data-active]="activeCategory() === 'enemies'">
+          Enemies
+          @if (activeCategory() === 'enemies') {
+          <span class="absolute bottom-0 left-1/2 -translate-x-1/2 w-20 h-[3px] bg-blue-500 rounded-t-lg"></span>
+          }
+        </button>
+        <button (click)="setActiveCategory('timeline')"
+          class="relative px-6 py-3 font-semibold transition-colors duration-200"
+          [ngClass]="activeCategory() === 'timeline' ? 'text-blue-600 dark:text-blue-400' : 'text-gray-600 dark:text-gray-400 hover:bg-blue-500/10 dark:hover:bg-blue-400/10 rounded-t-lg'"
+          data-testid="nav-timeline"
+          [attr.data-active]="activeCategory() === 'timeline'">
+          Timeline
+          @if (activeCategory() === 'timeline') {
+          <span class="absolute bottom-0 left-1/2 -translate-x-1/2 w-20 h-[3px] bg-blue-500 rounded-t-lg"></span>
+          }
+        </button>
+      </div>
+    </nav>
+
+    <!-- Content Area -->
+    <div class="container mx-auto px-4 md:px-8 pb-4 md:pb-8">
+      <div class="content-area mt-8">
+        @if (activeCategory() !== 'timeline') {
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8"
+          data-testid="character-grid">
+          @for (char of characters(); track char.id; let i = $index) {
+            <app-character-card [character]="char" [priority]="i < 4"
+            (getFunFact)="handleGetFunFact($event)"></app-character-card>
+          }
+        </div>
+          } @else {
+            <app-timeline [events]="timelineEvents()" data-testid="timeline-view"></app-timeline>
+          }
+      </div>
+      </div>
+      }
+  </main>
+
+  <!-- Fun Fact Modal -->
+  @if (selectedCharacter()) {
+  <div class="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center p-4 z-50"
+    (click)="closeFunFactModal()" data-testid="fun-fact-modal-backdrop">
+    <!-- M3 Dialog -->
+    <div
+      class="bg-white dark:bg-gray-800 rounded-2xl shadow-2xl max-w-lg w-full transform transition-all duration-300 scale-100"
+      (click)="$event.stopPropagation()">
+      <!-- Headline and Supporting Text -->
+      <div class="p-6">
+        <h2 class="text-2xl font-normal text-gray-900 dark:text-gray-100" data-testid="modal-title">
+          Fun Fact: {{ selectedCharacter()?.name }}
+        </h2>
+        <p class="mt-4 text-base text-gray-600 dark:text-gray-400" data-testid="modal-content">
+          {{ funFact() }}
+        </p>
+      </div>
+      <!-- Actions -->
+      <div class="flex justify-end items-center px-6 py-4">
+        <button (click)="closeFunFactModal()"
+          class="px-4 py-2 font-semibold text-blue-600 dark:text-blue-400 rounded-full hover:bg-blue-500/10 dark:hover:bg-blue-400/10 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white dark:focus:ring-offset-gray-800 focus:ring-blue-500 transition-colors"
+          aria-label="Close fun fact modal" data-testid="modal-close-button">
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+  }
+</div>
