@@ -5,8 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "ng serve",
-    "build": "ng build",
-    "preview": "ng serve --configuration=production"
+    "build": "ng build --base-href /",
+    "preview": "ng serve --configuration=production",
+    "start": "npx http-server ./dist -o --proxy http://localhost:8080?"
   },
   "dependencies": {
     "rxjs": "^7.8.2",
@@ -21,6 +22,7 @@
   },
   "devDependencies": {
     "@types/node": "^22.14.0",
+    "http-server": "^14.1.1",
     "typescript": "~5.8.2"
   }
 }
