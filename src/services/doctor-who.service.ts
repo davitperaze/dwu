@@ -5,6 +5,7 @@ import { HttpClient } from '@angular/common/http';
 import { forkJoin, tap } from 'rxjs';
 import { Character } from '../models/character.model';
 import { TimelineEvent } from '../models/timeline-event.model';
+import { HeroData } from '../components/hero/hero.component';
 
 type FunFactsData = Record<number, string[]>;
 
@@ -16,6 +17,7 @@ export class DoctorWhoService {
   friends = signal<Character[]>([]);
   enemies = signal<Character[]>([]);
   timelineEvents = signal<TimelineEvent[]>([]);
+  heroData = signal<Record<string, HeroData> | null>(null);
   private funFacts = signal<FunFactsData>({});
 
   loadAllData() {
@@ -25,12 +27,14 @@ export class DoctorWhoService {
       enemies: this.http.get<Character[]>('assets/data/enemies.json'),
       timelineEvents: this.http.get<TimelineEvent[]>('assets/data/timeline-events.json'),
       funFacts: this.http.get<FunFactsData>('assets/data/fun-facts.json'),
+      heroData: this.http.get<Record<string, HeroData>>('assets/data/hero-data.json'),
     }).pipe(
       tap(data => {
         this.doctors.set(data.doctors);
         this.friends.set(data.friends);
         this.enemies.set(data.enemies);
         this.timelineEvents.set(data.timelineEvents);
+        this.heroData.set(data.heroData);
         this.funFacts.set(data.funFacts);
       })
     );

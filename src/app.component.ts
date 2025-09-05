@@ -4,11 +4,12 @@ import { CommonModule, Location } from '@angular/common';
 
 import { Character } from './models/character.model';
 import { TimelineEvent } from './models/timeline-event.model';
-import { DoctorWhoService } from './services/doctor-who.service';
 
 import { HeaderComponent } from './components/header/header.component';
 import { CharacterCardComponent } from './components/character-card/character-card.component';
 import { TimelineComponent } from './components/timeline/timeline.component';
+import { HeroComponent } from './components/hero/hero.component';
+import { DoctorWhoService } from './services/doctor-who.service';
 import { catchError, of } from 'rxjs';
 
 type Category = 'doctors' | 'friends' | 'enemies' | 'timeline';
@@ -18,7 +19,7 @@ type Category = 'doctors' | 'friends' | 'enemies' | 'timeline';
   templateUrl: './app.component.html',
   standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [CommonModule, HeaderComponent, CharacterCardComponent, TimelineComponent],
+  imports: [CommonModule, HeaderComponent, CharacterCardComponent, TimelineComponent, HeroComponent],
 })
 export class AppComponent implements OnInit {
   doctorWhoService = inject(DoctorWhoService);
@@ -33,6 +34,7 @@ export class AppComponent implements OnInit {
   friends = this.doctorWhoService.friends;
   enemies = this.doctorWhoService.enemies;
   timelineEvents = this.doctorWhoService.timelineEvents;
+  heroData = this.doctorWhoService.heroData;
 
   // State for Character Fun Fact Modal
   selectedCharacter = signal<Character | null>(null);
@@ -82,6 +84,11 @@ export class AppComponent implements OnInit {
       default:
         return [];
     }
+  });
+
+  activeHeroData = computed(() => {
+    const category = this.activeCategory();
+    return this.heroData()?.[category];
   });
 
   setActiveCategory(category: Category) {

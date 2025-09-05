@@ -1,0 +1,22 @@
+{
+    "doctors": {
+        "title": "The Doctors",
+        "subtitle": "The many faces of the Time Lord who travels through time and space.",
+        "imageUrl": "assets/images/covers/doctors_cover.png"
+    },
+    "friends": {
+        "title": "The Friends",
+        "subtitle": "Brave individuals who have traveled with the Doctor.",
+        "imageUrl": "assets/images/covers/friends_cover.png"
+    },
+    "enemies": {
+        "title": "The Adversaries",
+        "subtitle": "The most dangerous foes the Doctor has ever faced.",
+        "imageUrl": "assets/images/covers/enemies_cover.png"
+    },
+    "timeline": {
+        "title": "The Timeline",
+        "subtitle": "A journey through the key moments of the Doctor's history.",
+        "imageUrl": "assets/images/covers/timeline_cover.png"
+    }
+}
